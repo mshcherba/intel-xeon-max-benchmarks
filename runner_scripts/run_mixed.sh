@@ -25,6 +25,11 @@ if [ -n "$GPU" ]; then
   BS_X=128
   BS_Y=1
   BS_Z=8
+  fi	
+  if [[ "${HIP_ARCH}" == "gfx942" ]]; then
+  BS_X=64
+  BS_Y=8
+  BS_Z=1
   fi
 fi
 

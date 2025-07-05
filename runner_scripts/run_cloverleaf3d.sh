@@ -27,6 +27,11 @@ if [ -n "$GPU" ]; then
         BS_Y=4
         BS_Z=4
         fi
+		if [[ "${HIP_ARCH}" == "gfx942" ]]; then
+		BS_X=32
+		BS_Y=2
+		BS_Z=16
+		fi
 fi
 sizes=( 408 )
 for i in "${sizes[@]}"

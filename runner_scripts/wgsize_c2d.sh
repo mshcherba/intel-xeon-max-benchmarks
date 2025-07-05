@@ -17,7 +17,7 @@ do
       fi
       echo "wg size test ${k} ${j} "
       echo "wg size test ${k} ${j} " >> c2d_"$ACCEL"_wgtest3d
-      output=$(stdbuf -o0 ./cloverleaf_"$ACCEL" -OPS_DIAGS=2 OPS_SYCL_DEVICE=$SYCL_DEVICE -gpudirect OPS_BLOCK_SIZE_X=${k} OPS_BLOCK_SIZE_Y=${j})
+      output=$(stdbuf -o0 ./cloverleaf_"$ACCEL" -OPS_DIAGS=2 OPS_GPU_MEASUREMENT_FREQUENCY=100 OPS_DEVICE=3 -gpudirect OPS_BLOCK_SIZE_X=${k} OPS_BLOCK_SIZE_Y=${j})
       echo "$output" >> c2d_"$ACCEL"_wgtest3d
       # Extract the time from the output and compare with the lowest time
       time=$(echo "$output" | grep "Total Wall time" | awk '{print $4}')

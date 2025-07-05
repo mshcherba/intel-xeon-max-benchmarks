@@ -13,7 +13,7 @@ IFS=',' read -ra array_mpiomp <<< "$CACHE_SIZES_MPIOMP"
 
 if [ -n "$GPU" ]; then
 #intel 
-        BS_X=512
+        BS_X=256
         BS_Y=2
 if [[ "${NV_ARCH}" == "Hopper" || "${HIP_ARCH}" == "gfx90a" ]]; then
         BS_X=128

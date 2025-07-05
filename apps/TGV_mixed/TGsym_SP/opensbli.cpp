@@ -11,7 +11,7 @@
 #include "opensbliblock00_kernels.h"
 #include "io.h"
 #ifndef mult
-#define mult 4
+#define mult 1
 #endif
 int main(int argc, char **argv) 
 {

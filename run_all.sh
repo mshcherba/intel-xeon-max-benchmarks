@@ -1,6 +1,6 @@
 #!/bin/bash
 export BASE=`pwd`
-source source_intel
+source source_hip
 source detect_hardware.sh
 export OMP_PROC_BIND=TRUE
 export SYCL_DEVICE=1
@@ -9,10 +9,15 @@ export SYCL_DEVICE=1
 #module load bask-apps/test
 #module load HDF5/1.10.7-iimpi-2021a
 #export SYCL=1
-#export ACCEL=hip
-#export GPU=1
-export CPUTEST=1
-export TILING=1
+export ACCEL=hip
+export ACCEL_FLAGS=" OPS_GPU_MEASUREMENT_FREQUENCY=100 OPS_DEVICE=0 "
+export GPU=1
+#export CPUTEST=1
+#export TILING=1
+#MI300A
+#export RAPL_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl\:3/energy_uj"
+#MI300X
+export RAPL_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj"
 #export RAPL_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj;/sys/devices/virtual/powercap/intel-rapl/intel-rapl:2/energy_uj"
 #export RAPL_DRAM_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj;/sys/devices/virtual/powercap/intel-rapl/intel-rapl:2/intel-rapl:2:0/energy_uj"
 #export RAPL_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj;/sys/devices/virtual/powercap/intel-rapl/intel-rapl:1/intel-rapl:1:0/energy_uj"

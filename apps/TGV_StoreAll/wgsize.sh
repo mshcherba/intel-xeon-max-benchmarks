@@ -17,7 +17,7 @@ do
       fi
       echo "wg size test ${k} ${j} ${i}"
       echo "wg size test ${k} ${j} ${i}" >> sa_"$ACCEL"_wgtest3d
-      output=$(stdbuf -o0 ./opensbli_"$ACCEL" 320 320 320 -OPS_DIAGS=2 OPS_SYCL_DEVICE=$SYCL_DEVICE -gpudirect OPS_BLOCK_SIZE_X=${k} OPS_BLOCK_SIZE_Z=${j} OPS_BLOCK_SIZE_Y=${i})
+      output=$(stdbuf -o0 ./opensbli_"$ACCEL" 320 320 320 -OPS_DIAGS=2 OPS_GPU_MEASUREMENT_FREQUENCY=100 OPS_DEVICE=3 -gpudirect OPS_BLOCK_SIZE_X=${k} OPS_BLOCK_SIZE_Z=${j} OPS_BLOCK_SIZE_Y=${i})
       echo "$output" >> sa_"$ACCEL"_wgtest3d
       # Extract the time from the output and compare with the lowest time
       time=$(echo "$output" | grep "Total Wall time" | awk '{print $4}')

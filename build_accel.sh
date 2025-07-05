@@ -1,6 +1,6 @@
 #!/bin/bash
 BASE=`pwd`
-source source_gcc
+source source_hip
 export OP_AUTO_SOA=1
 if [ -z "$2" ]; then
   set -- "$1" "all"
@@ -18,6 +18,16 @@ make rtm_"$1" -B &
 cd $BASE/apps/TGV_StoreAll
 make opensbli_"$1" -B &
 cd $BASE/apps/TGV_StoreNone
+make opensbli_"$1" -B &
+cd $BASE/apps/TGV_mixed/TGsym_DP
+make opensbli_"$1" -B &
+cd $BASE/apps/TGV_mixed/TGsym_SP
+make opensbli_"$1" -B &
+cd $BASE/apps/TGV_mixed/TGsym_HP
+make opensbli_"$1" -B &
+cd $BASE/apps/TGV_mixed/TGsym_SPDP
+make opensbli_"$1" -B &
+cd $BASE/apps/TGV_mixed/TGsym_HPSP
 make opensbli_"$1" -B &
 cd $BASE/apps/ops_so08
 make wave-propagation_"$1" -B &

@@ -607,180 +607,180 @@ const ACC<half> &wk7_B0, const ACC<half> &wk8_B0, const ACC<half> &wk9_B0, ACC<f
 
 void opensbliblock00Kernel053(const ACC<float> &u0_B0, ACC<half> &wk1_B0)
 {
-    wk1_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(1,0,0) - 16*u0_B0(-1,0,0) + 30*u0_B0(0,0,0) + u0_B0(-2,0,0) +
+    wk1_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(1,0,0) - 16*u0_B0(-1,0,0) + half(30)*u0_B0(0,0,0) + u0_B0(-2,0,0) +
       u0_B0(2,0,0))*inv2Delta0block0;
 
 }
 
 void opensbliblock00Kernel055(const ACC<float> &T_B0, ACC<half> &wk3_B0)
 {
-    wk3_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(1,0,0) - 16*T_B0(-1,0,0) + 30*T_B0(0,0,0) + T_B0(-2,0,0) +
+    wk3_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(1,0,0) - 16*T_B0(-1,0,0) + half(30)*T_B0(0,0,0) + T_B0(-2,0,0) +
       T_B0(2,0,0))*inv2Delta0block0;
 
 }
 
 void opensbliblock00Kernel057(const ACC<float> &u2_B0, ACC<half> &wk5_B0)
 {
-   wk5_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u2_B0(0,-2,0) - 8*u2_B0(0,1,0) + 8*u2_B0(0,-1,0) + u2_B0(0,2,0))*invDelta1block0;
+   wk5_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u2_B0(0,-2,0) - half(8)*u2_B0(0,1,0) + half(8)*u2_B0(0,-1,0) + u2_B0(0,2,0))*invDelta1block0;
 
 }
 
 void opensbliblock00Kernel058(const ACC<float> &u0_B0, ACC<half> &wk6_B0)
 {
-   wk6_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(0,-2,0) - 8*u0_B0(0,1,0) + 8*u0_B0(0,-1,0) + u0_B0(0,2,0))*invDelta1block0;
+   wk6_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(0,-2,0) - half(8)*u0_B0(0,1,0) + half(8)*u0_B0(0,-1,0) + u0_B0(0,2,0))*invDelta1block0;
 
 }
 
 void opensbliblock00Kernel059(const ACC<float> &u2_B0, ACC<half> &wk7_B0)
 {
-    wk7_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(0,1,0) - 16*u2_B0(0,-1,0) + 30*u2_B0(0,0,0) + u2_B0(0,-2,0) +
+    wk7_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(0,1,0) - 16*u2_B0(0,-1,0) + half(30)*u2_B0(0,0,0) + u2_B0(0,-2,0) +
       u2_B0(0,2,0))*inv2Delta1block0;
 
 }
 
 void opensbliblock00Kernel060(const ACC<float> &u1_B0, ACC<half> &wk8_B0)
 {
-    wk8_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u1_B0(0,1,0) - 16*u1_B0(0,-1,0) + 30*u1_B0(0,0,0) + u1_B0(0,-2,0) +
+    wk8_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u1_B0(0,1,0) - 16*u1_B0(0,-1,0) + half(30)*u1_B0(0,0,0) + u1_B0(0,-2,0) +
       u1_B0(0,2,0))*inv2Delta1block0;
 
 }
 
 void opensbliblock00Kernel061(const ACC<float> &u1_B0, ACC<half> &wk9_B0)
 {
-    wk9_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u1_B0(0,0,-2) - u1_B0(0,0,2) - 30*u1_B0(0,0,0) + 16*u1_B0(0,0,1) +
+    wk9_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u1_B0(0,0,-2) - u1_B0(0,0,2) - half(30)*u1_B0(0,0,0) + 16*u1_B0(0,0,1) +
       16*u1_B0(0,0,-1))*inv2Delta2block0;
 
 }
 
 void opensbliblock00Kernel063(const ACC<float> &u1_B0, ACC<half> &wk11_B0)
 {
-   wk11_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u1_B0(0,0,2) - 8*u1_B0(0,0,-1) + 8*u1_B0(0,0,1) + u1_B0(0,0,-2))*invDelta2block0;
+   wk11_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u1_B0(0,0,2) - half(8)*u1_B0(0,0,-1) + half(8)*u1_B0(0,0,1) + u1_B0(0,0,-2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel064(const ACC<float> &u1_B0, ACC<half> &wk12_B0)
 {
-    wk12_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u1_B0(1,0,0) - 16*u1_B0(-1,0,0) + 30*u1_B0(0,0,0) + u1_B0(-2,0,0) +
+    wk12_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u1_B0(1,0,0) - 16*u1_B0(-1,0,0) + half(30)*u1_B0(0,0,0) + u1_B0(-2,0,0) +
       u1_B0(2,0,0))*inv2Delta0block0;
 
 }
 
 void opensbliblock00Kernel065(const ACC<float> &u2_B0, ACC<half> &wk13_B0)
 {
-    wk13_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(0,0,1) - 16*u2_B0(0,0,-1) + 30*u2_B0(0,0,0) + u2_B0(0,0,-2) +
+    wk13_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(0,0,1) - 16*u2_B0(0,0,-1) + half(30)*u2_B0(0,0,0) + u2_B0(0,0,-2) +
       u2_B0(0,0,2))*inv2Delta2block0;
 
 }
 
 void opensbliblock00Kernel066(const ACC<float> &u2_B0, ACC<half> &wk14_B0)
 {
-    wk14_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(1,0,0) - 16*u2_B0(-1,0,0) + 30*u2_B0(0,0,0) + u2_B0(-2,0,0) +
+    wk14_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u2_B0(1,0,0) - 16*u2_B0(-1,0,0) + half(30)*u2_B0(0,0,0) + u2_B0(-2,0,0) +
       u2_B0(2,0,0))*inv2Delta0block0;
 
 }
 
 void opensbliblock00Kernel067(const ACC<float> &u0_B0, ACC<half> &wk15_B0)
 {
-    wk15_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(0,0,1) - 16*u0_B0(0,0,-1) + 30*u0_B0(0,0,0) + u0_B0(0,0,-2) +
+    wk15_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(0,0,1) - 16*u0_B0(0,0,-1) + half(30)*u0_B0(0,0,0) + u0_B0(0,0,-2) +
       u0_B0(0,0,2))*inv2Delta2block0;
 
 }
 
 void opensbliblock00Kernel068(const ACC<float> &u0_B0, ACC<half> &wk16_B0)
 {
-    wk16_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(0,1,0) - 16*u0_B0(0,-1,0) + 30*u0_B0(0,0,0) + u0_B0(0,-2,0) +
+    wk16_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*u0_B0(0,1,0) - 16*u0_B0(0,-1,0) + half(30)*u0_B0(0,0,0) + u0_B0(0,-2,0) +
       u0_B0(0,2,0))*inv2Delta1block0;
 
 }
 
 void opensbliblock00Kernel069(const ACC<float> &u1_B0, ACC<half> &wk17_B0)
 {
-   wk17_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u1_B0(-2,0,0) - 8*u1_B0(1,0,0) + 8*u1_B0(-1,0,0) + u1_B0(2,0,0))*invDelta0block0;
+   wk17_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u1_B0(-2,0,0) - half(8)*u1_B0(1,0,0) + half(8)*u1_B0(-1,0,0) + u1_B0(2,0,0))*invDelta0block0;
 
 }
 
 void opensbliblock00Kernel070(const ACC<float> &u1_B0, ACC<half> &wk18_B0)
 {
-   wk18_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u1_B0(0,-2,0) - 8*u1_B0(0,1,0) + 8*u1_B0(0,-1,0) + u1_B0(0,2,0))*invDelta1block0;
+   wk18_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u1_B0(0,-2,0) - half(8)*u1_B0(0,1,0) + half(8)*u1_B0(0,-1,0) + u1_B0(0,2,0))*invDelta1block0;
 
 }
 
 void opensbliblock00Kernel073(const ACC<float> &T_B0, ACC<half> &wk21_B0)
 {
-    wk21_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(0,1,0) - 16*T_B0(0,-1,0) + 30*T_B0(0,0,0) + T_B0(0,-2,0) +
+    wk21_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(0,1,0) - 16*T_B0(0,-1,0) + half(30)*T_B0(0,0,0) + T_B0(0,-2,0) +
       T_B0(0,2,0))*inv2Delta1block0;
 
 }
 
 void opensbliblock00Kernel074(const ACC<float> &u2_B0, ACC<half> &wk22_B0)
 {
-   wk22_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u2_B0(-2,0,0) - 8*u2_B0(1,0,0) + 8*u2_B0(-1,0,0) + u2_B0(2,0,0))*invDelta0block0;
+   wk22_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u2_B0(-2,0,0) - half(8)*u2_B0(1,0,0) + half(8)*u2_B0(-1,0,0) + u2_B0(2,0,0))*invDelta0block0;
 
 }
 
 void opensbliblock00Kernel075(const ACC<float> &u0_B0, ACC<half> &wk23_B0)
 {
-   wk23_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(0,0,-2) - 8*u0_B0(0,0,1) + 8*u0_B0(0,0,-1) + u0_B0(0,0,2))*invDelta2block0;
+   wk23_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(0,0,-2) - half(8)*u0_B0(0,0,1) + half(8)*u0_B0(0,0,-1) + u0_B0(0,0,2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel076(const ACC<float> &u0_B0, ACC<half> &wk24_B0)
 {
-   wk24_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(-2,0,0) - 8*u0_B0(1,0,0) + 8*u0_B0(-1,0,0) + u0_B0(2,0,0))*invDelta0block0;
+   wk24_B0(0,0,0) = -(half(1.0)/half(12.0))*(-u0_B0(-2,0,0) - half(8)*u0_B0(1,0,0) + half(8)*u0_B0(-1,0,0) + u0_B0(2,0,0))*invDelta0block0;
 
 }
 
 void opensbliblock00Kernel077(const ACC<float> &u2_B0, ACC<half> &wk25_B0)
 {
-   wk25_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u2_B0(0,0,2) - 8*u2_B0(0,0,-1) + 8*u2_B0(0,0,1) + u2_B0(0,0,-2))*invDelta2block0;
+   wk25_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-u2_B0(0,0,2) - half(8)*u2_B0(0,0,-1) + half(8)*u2_B0(0,0,1) + u2_B0(0,0,-2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel078(const ACC<float> &T_B0, ACC<half> &wk26_B0)
 {
-    wk26_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(0,0,1) - 16*T_B0(0,0,-1) + 30*T_B0(0,0,0) + T_B0(0,0,-2) +
+    wk26_B0(0,0,0) = -(half(1.0)/half(12.0))*(-16*T_B0(0,0,1) - 16*T_B0(0,0,-1) + half(30)*T_B0(0,0,0) + T_B0(0,0,-2) +
       T_B0(0,0,2))*inv2Delta2block0;
 
 }
 
 void opensbliblock00Kernel052(const ACC<half> &wk24_B0, ACC<half> &wk0_B0)
 {
-    wk0_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk24_B0(0,0,-2) - 8*wk24_B0(0,0,1) + 8*wk24_B0(0,0,-1) +
+    wk0_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk24_B0(0,0,-2) - half(8)*wk24_B0(0,0,1) + half(8)*wk24_B0(0,0,-1) +
       wk24_B0(0,0,2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel054(const ACC<half> &wk24_B0, ACC<half> &wk2_B0)
 {
-    wk2_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk24_B0(0,-2,0) - 8*wk24_B0(0,1,0) + 8*wk24_B0(0,-1,0) +
+    wk2_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk24_B0(0,-2,0) - half(8)*wk24_B0(0,1,0) + half(8)*wk24_B0(0,-1,0) +
       wk24_B0(0,2,0))*invDelta1block0;
 
 }
 
 void opensbliblock00Kernel056(const ACC<half> &wk5_B0, ACC<half> &wk4_B0)
 {
-    wk4_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-wk5_B0(0,0,2) - 8*wk5_B0(0,0,-1) + 8*wk5_B0(0,0,1) +
+    wk4_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-wk5_B0(0,0,2) - half(8)*wk5_B0(0,0,-1) + half(8)*wk5_B0(0,0,1) +
       wk5_B0(0,0,-2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel062(const ACC<half> &wk22_B0, ACC<half> &wk10_B0)
 {
-    wk10_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk22_B0(0,0,-2) - 8*wk22_B0(0,0,1) + 8*wk22_B0(0,0,-1) +
+    wk10_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk22_B0(0,0,-2) - half(8)*wk22_B0(0,0,1) + half(8)*wk22_B0(0,0,-1) +
       wk22_B0(0,0,2))*invDelta2block0;
 
 }
 
 void opensbliblock00Kernel071(const ACC<half> &wk17_B0, ACC<half> &wk19_B0)
 {
-    wk19_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk17_B0(0,-2,0) - 8*wk17_B0(0,1,0) + 8*wk17_B0(0,-1,0) +
+    wk19_B0(0,0,0) = -(half(1.0)/half(12.0))*(-wk17_B0(0,-2,0) - half(8)*wk17_B0(0,1,0) + half(8)*wk17_B0(0,-1,0) +
       wk17_B0(0,2,0))*invDelta1block0;
 
 }
 
 void opensbliblock00Kernel072(const ACC<half> &wk18_B0, ACC<half> &wk20_B0)
 {
-    wk20_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-wk18_B0(0,0,2) - 8*wk18_B0(0,0,-1) + 8*wk18_B0(0,0,1) +
+    wk20_B0(0,0,0) = ((half(1.0)/half(12.0)))*(-wk18_B0(0,0,2) - half(8)*wk18_B0(0,0,-1) + half(8)*wk18_B0(0,0,1) +
       wk18_B0(0,0,-2))*invDelta2block0;
 
 }

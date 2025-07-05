@@ -13,7 +13,7 @@
 #include "opensbliblock00_kernels.h"
 #include "io.h"
 #ifndef mult
-#define mult 4
+#define mult 1
 #endif
 int main(int argc, char **argv) 
 {
@@ -38,10 +38,10 @@ gama = 1.4;
 Minf = 0.5;
 Pr = 0.71;
 Re = 800.0;
-inv2Delta0block0 = 1.0/(Delta0block0*Delta0block0);
-inv2Delta1block0 = 1.0/(Delta1block0*Delta1block0);
-inv2Delta2block0 = 1.0/(Delta2block0*Delta2block0);
-inv2Minf = 1.0/(Minf*Minf);
+inv2Delta0block0 = 1.0/(double(Delta0block0)*double(Delta0block0));
+inv2Delta1block0 = 1.0/(double(Delta1block0)*double(Delta1block0));
+inv2Delta2block0 = 1.0/(double(Delta2block0)*double(Delta2block0));
+inv2Minf = 1.0/(double(Minf)*double(Minf));
 invDelta0block0 = 1.0/(Delta0block0);
 invDelta1block0 = 1.0/(Delta1block0);
 invDelta2block0 = 1.0/(Delta2block0);
@@ -128,7 +128,7 @@ double cpu_start0, elapsed_start0, cpu_end0, elapsed_end0;
 ops_timers(&cpu_start0, &elapsed_start0);
 for(iter=start_iter; iter<=start_iter+niter - 1; iter++)
 {
-simulation_time = tstart + dt*((iter - start_iter)+1);
+simulation_time = double(tstart) + double(dt)*((iter - start_iter)+1);
 
 int iteration_range_81_block0[] = {0, 1, -2, block0np1 + 2, -2, block0np2 + 2};
 ops_par_loop(opensbliblock00Kernel081, "Symmetry boundary dir0 side0", opensbliblock00, 3, iteration_range_81_block0,
