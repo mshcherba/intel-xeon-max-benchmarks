@@ -1,5 +1,10 @@
 #!/bin/bash
 BASE="${1:-$(pwd)}"
+
+# Install system dependencies
+sudo apt-get update
+sudo apt-get install -y cmake libopenmpi-dev openmpi-bin
+
 wget https://hdf-wordpress-1.s3.amazonaws.com/wp-content/uploads/manual/HDF5/HDF5_1_12_2/source/hdf5-1.12.2.tar.gz
 tar xfv hdf5-1.12.2.tar.gz
 cd hdf5-1.12.2/
