@@ -3,7 +3,7 @@ BASE="${1:-$(pwd)}"
 
 # 1. Install system dependencies
 sudo apt-get update
-sudo apt-get install -y cmake libopenmpi-dev openmpi-bin
+sudo apt-get install -y cmake libopenmpi-dev openmpi-bin python3-clang python3-pcpp python3-cached-property python3-fparser python3-sympy
 
 # 2. Intel OneAPI Installation
 wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | sudo gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null
