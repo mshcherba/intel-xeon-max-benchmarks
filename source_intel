@@ -1,10 +1,10 @@
 #!/bin/bash
-#OneAPI Install paths
-#source /bask/projects/j/jarvissz-cfd-scaling/oneapi2/setvars.sh --force
-#export HDF5_INSTALL_PATH=/bask/apps/test/EL8-ice/software/HDF5/1.10.7-iimpi-2021a
-export MPI_INSTALL_PATH=$(dirname $(dirname `which mpicxx`))
+# OneAPI Install paths
+source /opt/intel/oneapi/setvars.sh --force
 
-#test suite
+export MPI_INSTALL_PATH=$(dirname $(dirname $(which mpicxx)))
+
+# test suite base directory
 BASE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 export OPS_COMPILER=intel
 export OP2_COMPILER=intel
@@ -14,20 +14,18 @@ export HDF5_INSTALL_PATH=$BASE_DIR/hdf5
 export HDF5_SEQ_INSTALL_PATH=$BASE_DIR/hdf5-seq
 export PTSCOTCH_INSTALL_PATH=$BASE_DIR/ptscotch
 export PARMETIS_INSTALL_PATH=$BASE_DIR/parmetis
+
 export I_MPI_CC=icx
 export I_MPI_CXX=icpx
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HDF5_INSTALL_PATH/lib
-export TMPDIR=`pwd`
+
 export OMPI_CC=$I_MPI_CC
 export OMPI_CXX=$I_MPI_CXX
+
+# Only HDF5 needs LD_LIBRARY_PATH (it has .so files), others are static (.a)
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HDF5_INSTALL_PATH/lib
 
 export bind_numa="-bind-to numa"
 export bind_core="-bind-to core"
 export bind_hwthread="-bind-to hwthread"
-#this is just for the OpenMPI setup on PPCU local cluster
-# export mpirunflags="-mca io ^ompio"
-# export bind_numa="$BASE_DIR/numawrap"
-# export bind_core="$BASE_DIR/numawrap"
-# export bind_hwthread="$BASE_DIR/numawrap"
 
 
