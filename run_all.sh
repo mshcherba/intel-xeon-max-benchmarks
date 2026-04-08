@@ -12,7 +12,7 @@ export SYCL_DEVICE=1
 # Intel Xeon Max 9462 — CPU only (HBM, no GPU)
 export ACCEL=mpi
 export ACCEL_FLAGS=""
-export GPU=0
+#export GPU=0
 export CPUTEST=1
 #export TILING=1
 #export RAPL_PATH="/sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj"
