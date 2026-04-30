@@ -13,7 +13,7 @@
 [submodule "OPS"]
 	path = OPS
 	url = https://github.com/OP-DSL/OPS.git
-	branch = master
+	branch = develop
 [submodule "OP2-Common"]
 	path = OP2-Common
 	url = https://github.com/OP-DSL/OP2-Common.git
